@@ -37,9 +37,38 @@ header nav form input[type="submit"]{
     margin: -150px 0px 0px 0px;
     /* margin-top: -150px */;
 }
-/* #buscar{
+#seccion01{
+    margin-top: 15px;
+}
+#seccion01 article{
+    text-align: center;
+}
+#seccion01 article img{
+    width: 98%;
+    border: 5px solid rgba(150, 150, 250, 0.3);
+}
+#seccion02 article{
+    width: 32.8%;
+    display: inline-block;
+    vertical-align: top;
+}    
+    /* #buscar{
     background: green;
     border: 1px solid green;
     color: white;
 } */
-
+.nito{
+    font-weight: bold;
+}
+.unaSeccion{
+    font-size: 4.5em;
+}
+.otraSeccion{
+    font-size: 2.5em;
+}
+.verMas{
+    background: white;
+    color: blue;    
+    border-radius: 5px;
+    margin-left: 35%;
+}
