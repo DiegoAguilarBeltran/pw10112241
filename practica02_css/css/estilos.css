@@ -4,6 +4,13 @@ body{
     min-width: 1078px;
     margin: 0px auto;
 }
+footer{
+    height: 200px;
+}
+footer section{
+    background-color: #4565b1;
+    height: 150px;
+}
 header input{
     float: right;
     margin-right: -230px;
@@ -36,6 +43,20 @@ header nav{
     display: inline-block;
     vertical-align: top;
 }
+#segundaseccion article{
+    /* border: 1px solid red; */
+    text-align: right;
+    /* margin-right: 140px; */
+    padding-right: 140px;
+}
+#terceraseccion article{
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+}
+#terceraseccion article img{
+    vertical-align: middle;
+}
 #seccion01art01{
     /* border: 1px solid red; */
     width: 61%;
@@ -51,6 +72,9 @@ header nav{
 #seccion01art02 ul li:before{
     color: #FF0099;
     content: "• ";
+}
+#seccion03art04{
+    padding-top: 60px;
 }
 #bgoffer{
     position: relative;
@@ -71,4 +95,7 @@ header nav{
 }
 .letragrande{
     font-size: 3.5em;
+}
+.letramediana{
+    font-size: 2em;
 }
