@@ -1,0 +1,48 @@
+body{
+    font-size: 16px;
+    max-width: 1024px;
+    margin: 0px auto;
+}
+header{
+    height: 180px;
+}
+header article{
+    display: inline-block;
+}
+header article nav ul{
+    padding-left: 0px;
+    margin: 50px 0px;
+    float: left;
+}
+header article nav ul li{
+    display: inline-block;
+    padding-right: 25px;
+}
+#imgfirstbike{
+    margin-top: 25px;
+    float: left;
+    width: 200px;
+}
+#art1header{
+    margin-left: 20px;
+    height: 98%;
+    width: 55%;
+}
+#art2header{
+    float: right;
+    height: 98%;
+    width: 40%;
+}
+#imgbuy{
+    margin-left: 100px;
+    width: 55px;
+}
+#imggoto{
+    margin-left: 150px;
+    width: 150px;
+}
+.bolitas{
+    float: right;
+    width: 30px;
+    margin: 10px 5px;
+}
