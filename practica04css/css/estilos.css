@@ -1,3 +1,10 @@
+html{
+    --color-negro: #000000;
+    --color-verde: #73f33d;
+    --color-gris: #ada2a2;
+    --color-linea: #a7a7a7;
+    --color-blanco: white;
+}
 body{
     font-size: 16px;
     max-width: 1024px;
@@ -17,6 +24,21 @@ header article nav ul{
 header article nav ul li{
     display: inline-block;
     padding-right: 25px;
+}
+section article hr{
+    margin-bottom: 35px;
+}
+footer section article{
+    vertical-align: top;
+    display: inline-block;
+    width: 19.6%;
+}
+footer section article table{
+    width: 100%;
+    padding-left: 20px;
+}
+header,section,footer{
+    background: var(--color-blanco);
 }
 #imgfirstbike{
     margin-top: 25px;
@@ -41,8 +63,74 @@ header article nav ul li{
     margin-left: 150px;
     width: 150px;
 }
+#seccion1 article{
+    display: inline-block;
+}
+#article1seccion1{
+    margin-left: 20px;
+    width: 55%;
+}
+#article2seccion1{
+    float: right;
+    width: 40%;
+}
+#imgbicicleta{
+    float: right;
+    width: 95%;
+}
+#img5years{
+    position: absolute;
+    margin-top: 400px;
+    width: 150px;
+}
+#video2{
+    float: right;
+}
+#seccion1footer{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+#seccion1footer img,span{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#seccion2footer{
+    margin-top: 50px;
+}
+#seccion2footer article table hr{
+    margin: 8px 0px;
+}
 .bolitas{
     float: right;
     width: 30px;
     margin: 10px 5px;
+}
+.video{
+    width: 260px;
+    padding-top: 35px;
+}
+.linea-punteada{
+    border-style: dashed;
+    color: var(--color-linea);
+}
+.letra-negra{
+    color: var(--color-negro);
+}
+.letra-gris{
+    color: var(--color-gris);
+}
+.letra-verde{
+    color: var(--color-verde);
+}
+.letra-grande{
+    font-size: 4.1em;
+}
+.letra-mediana{
+    font-size: 1em;
+}
+.letra-chica{
+    font-size: 0.9em;
+}
+.negrita{
+    font-weight: bold;
 }
