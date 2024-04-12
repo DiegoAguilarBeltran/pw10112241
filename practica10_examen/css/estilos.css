@@ -1,0 +1,103 @@
+body{
+    font-size: 16px;
+    max-width: 1078px;
+    min-width: 1078px;
+    margin: 0px auto;
+    background-color: #fafafa;
+}
+header{
+    height: 70px;
+}
+header article{
+    display: inline-block;
+    margin-top: 25px;
+}
+header article ul li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+footer{
+    margin-top: 50px;
+    text-align: center;
+}
+footer article{
+    display: inline-block;
+    width: 21%;
+    margin: 0px 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 200px;
+    text-align: start;
+    padding: 10px 10px;
+    padding-top: 50px;
+}
+#headerizq{
+    float: left;
+}
+#headermid ul{
+    padding: 0px 0px;
+    margin-left: 250px;
+}
+#headerder{
+    margin-top: 40px;
+    float: right;
+}
+#headerder button{
+    float: right;
+    margin-left: 20px;
+    border: solid 1px #ff0143;
+    border-radius: 5px;
+}
+#boton1{
+    width: 100px;
+    height: 40px;
+    background-color: #ff0143;
+    color: white;
+}
+#boton2{
+    width: 120px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #ff0143;
+}
+#sectionmid{
+    margin-top: 140px;
+    height:400px;
+}
+#sectionmid article{
+    display: inline-block;
+}
+#articleizq{
+    width: 60%;
+    float: left;
+}
+#articleder{
+    width: 39%;
+    float: right;
+}
+#search{
+    width: 620px;
+}
+#sectionfooter{
+    margin-top: 20px;
+}
+#imgwork{
+    width: 370px;
+    margin-left: 100px;
+    margin-top: -50px;
+}
+.letragrande{
+    font-size: 4em;
+}
+.letramediana{
+    font-size: 3.2em;
+}
+.letramediachica{
+    font-size: 2em;
+}
+.letrachica{
+    font-size: 1.2em;
+}
+.nito{
+    font-weight: bold;
+}
