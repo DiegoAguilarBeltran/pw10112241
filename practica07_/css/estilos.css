@@ -1,0 +1,123 @@
+body{
+    font-size: 16px;
+    max-width: 1024px;
+    margin: 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    height: 50px;
+}
+header article, ul li{
+    display: inline-block;
+}
+header article ul{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    vertical-align: middle;
+}
+header article ul li{
+    padding-right: 15px;
+}
+footer{
+    margin: 50px 0px;
+    text-align: center;
+}
+footer article{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding: 0px 20px;
+}
+#primeramitad{
+    background-color: #1e2838;
+    height: 650px;
+}
+#headerder{
+    margin-top: 20px;
+    margin-right: 50px;
+    float: right;
+}
+#headerizq{
+    margin-top: 20px;
+    margin-left: 90px;
+    float: left;
+}
+#linkicon{
+    margin-top: -5px;
+}
+#usericon{
+    margin-top: -10px;
+}
+#articlemid{
+    margin-top: 100px;
+    text-align: center;
+}
+#articlemid button{
+    border-radius: 50px;
+    width: 120px;
+    height: 45px;
+    margin: 25px 5px;
+    border: 0px;
+}
+#articlemid button img,span{
+    vertical-align: middle;
+    display: inline-block;
+}
+#botonizq{
+    background-color: #1d4ed8;
+}
+#botonder{
+    background-color: #384152;
+}
+#articlebajo{
+    text-align: center;
+    margin-top: 250px;
+}
+#imgdesk{
+    width: 660px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: solid 5px white;
+}
+.textoheader{
+    vertical-align: top;
+}
+.iconos{
+    width: 30px;
+}
+.botonicon{
+    width: 20px;
+}
+.letragrande{
+    font-size: 1.8em;
+}
+.letramediana{
+    font-size: 1em;
+}
+.letrachica{
+    font-size: 0.9em;
+}
+.negrita{
+    font-weight: bold;
+}
+.blanca{
+    color: white;
+}
+.pocoblanca{
+    color: whitesmoke;
+}
+.negra{
+    color: black;
+}
+.gris{
+    color: gray;
+}
+.interlineado{
+    line-height: 25px;
+}
+.miniheader{
+    margin: 10px 0px;
+}
+.textolorem{
+    text-align: start;
+}
