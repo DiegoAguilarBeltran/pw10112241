@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import MenuView from '../views/MenuView.vue'
 import ClientesView from '../views/ClientesView.vue'
 import ClientesCreateView from '../views/ClientesCreateView.vue'
+import ClientesEditarView from '../views/ClientesEditarView.vue'
 
 
 const router = createRouter({
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/clientes/create',
       name: 'clientescreate',
       component: ClientesCreateView
+    },
+    {
+      path: '/clientes/:id/edit',
+      name: 'clienteseditar',
+      component: ClientesEditarView
     },
     {
       path: '/about',

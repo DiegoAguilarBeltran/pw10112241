@@ -45,7 +45,7 @@ app.get('/api/clientes/:id',(req,res)=>{
         if(error){
             throw error;
         }else{
-            res.send(filas);
+            res.send(fila);
         }
     });
 });
