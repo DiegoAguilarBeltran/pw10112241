@@ -4,6 +4,7 @@ import MenuView from '../views/MenuView.vue'
 import ClientesView from '../views/ClientesView.vue'
 import ClientesCreateView from '../views/ClientesCreateView.vue'
 import ClientesEditarView from '../views/ClientesEditarView.vue'
+import RegistroView from '../views/RegistroView.vue'
 
 
 const router = createRouter({
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/clientes/:id/edit',
       name: 'clienteseditar',
       component: ClientesEditarView
+    },
+    {
+      path: '/registro',
+      name: 'registro',
+      component: RegistroView
     },
     {
       path: '/about',
