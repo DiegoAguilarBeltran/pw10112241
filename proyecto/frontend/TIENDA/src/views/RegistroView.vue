@@ -8,22 +8,25 @@
 
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+              <h2 class="fw-bold mb-2 text-uppercase">Registro</h2>
+              <p class="text-white-50 mb-5">Please enter your email and password!</p>
+              <div v-if="mensaje==1" class="alert alert-primary" role="alert">
+                Usuario registrado con exito
+              </div>
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                <input v-model="correo" type="email" id="typeEmailX" class="form-control form-control-lg" />
                 <label class="form-label" for="typeEmailX">Email</label>
               </div>
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                <input v-model="password" type="password" id="typePasswordX" class="form-control form-control-lg" />
                 <label class="form-label" for="typePasswordX">Password</label>
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
-              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+              <button @click.prevent="registro()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
               <div class="d-flex justify-content-center text-center mt-4 pt-1">
                 <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
@@ -45,3 +48,42 @@
   </div>
 </section>
 </template>
+<style>
+.gradient-custom {
+/* fallback for old browsers */
+background: #6a11cb;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+</style>
+<script>
+    import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
+
+    export default{
+      name: "RegistroView",
+      data(){
+        return{
+          correo: '',
+          password: '',
+          mensaje: 0
+        }
+      },
+      methods:{
+        registro(){
+          createUserWithEmailAndPassword(getAuth(), this.correo, this.password)
+          .then((data) => {
+            this.mensaje = 1;
+            this.correo = '';
+            this.password = '';
+          })
+          .catch((error) => {
+            alert(error.message)
+          })
+        },
+      }
+    }
+</script>
