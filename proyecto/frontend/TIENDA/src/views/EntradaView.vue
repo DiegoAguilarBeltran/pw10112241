@@ -8,10 +8,10 @@
 
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Registro de usuarios</h2>
-              <p class="text-white-50 mb-5">Please enter an email and password!</p>
-              <div v-if="mensaje==1" class="alert alert-primary" role="alert">
-                Usuario registrado con exito
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <p class="text-white-50 mb-5">Please enter your email and password!</p>
+              <div v-if="mensaje" class="alert alert-danger" role="alert">
+                {{ mensaje }}
               </div>
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
@@ -26,8 +26,15 @@
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
-              <button @click.prevent="registro()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Registrar</button>
+              <button @click.prevent="registro()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Validar</button>
+              <p></p>
+              <button @click.prevent="registroGoogle()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Google</button>
 
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+              </p>
             </div>
 
           </div>
@@ -50,7 +57,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 }
 </style>
 <script>
-    import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
+    import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
 
     export default{
       name: "RegistroView",
@@ -63,15 +70,27 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
       },
       methods:{
         registro(){
-          createUserWithEmailAndPassword(getAuth(), this.correo, this.password)
-          .then((data) => {
-            this.mensaje = 1;
-            this.correo = '';
-            this.password = '';
-          })
-          .catch((error) => {
-            alert(error.message)
-          })
+            signInWithEmailAndPassword(getAuth(), this.correo, this.password)
+            .then((data) => {
+                this.mensaje = ''
+                this.correo = ''
+                this.password = ''
+            }).catch((error) => {
+                switch (error.code) {
+                    case "auth/invalid-email":
+                        this.mensaje = "Correo no valido"
+                        break;
+                        case "auth/user-not-found":
+                        this.mensaje = "Usuario no valido"
+                        break;
+                        case "auth/wrong-password":
+                        this.mensaje = "Contrasena incorrecta"
+                        break;
+                        default:
+                        this.mensaje = "Correo o contrasena incorrecta"
+                        break;
+                }                
+            })
         },
       }
     }
