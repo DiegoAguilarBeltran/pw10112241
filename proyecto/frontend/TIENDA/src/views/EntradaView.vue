@@ -26,9 +26,11 @@
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
-              <button @click.prevent="registro()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Validar</button>
+              <button @click.prevent="registro()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Entrar</button>
               <p></p>
-              <button @click.prevent="registroGoogle()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Google</button>
+              <button @click.prevent="registroGoogle()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">
+                <Icon icon="logos:google-icon" /> Google
+              </button>
 
             </div>
 
@@ -57,10 +59,12 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 }
 </style>
 <script>
-    import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
+    import {getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+    import { Icon } from '@iconify/vue';
 
     export default{
       name: "RegistroView",
+      components: { Icon },
       data(){
         return{
           correo: '',
@@ -91,6 +95,13 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
                         break;
                 }                
             })
+        },
+        registroGoogle(){
+          const provider = new GoogleAuthProvider();
+          signInWithPopup(getAuth(), provider)
+          .then((result) => {
+            this.$router.push('/clientes/')
+          })
         },
       }
     }
